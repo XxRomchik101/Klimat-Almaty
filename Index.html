@@ -4,92 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Klimat Almaty</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.umd.js"></script>
 </head>
+
 <body class="bg-gray-100 font-sans">
 
   <!-- Header -->
-  <header class="bg-green-600 text-white p-4 shadow-lg fixed w-full z-10">
+  <header class="bg-green-600 text-white p-4 shadow-lg fixed top-0 left-0 w-full z-50">
     <div class="max-w-6xl mx-auto flex justify-between items-center">
       <h1 class="text-2xl font-bold">Klimat Almaty</h1>
-      <a href="tel:+77052755155" class="bg-white text-green-600 px-4 py-2 rounded-xl font-semibold hover:bg-gray-200 transition">Позвонить</a>
+      <a href="tel:+77052755155" class="bg-white text-green-600 px-4 py-2 rounded-xl font-semibold hover:bg-gray-200 transition">
+        Позвонить
+      </a>
     </div>
   </header>
 
+  <!-- Отступ чтобы контент не залезал под шапку -->
+  <div class="mt-20"></div>
+
   <!-- Hero -->
-  <section class="text-center py-32 bg-white mt-16">
-    <h2 class="text-5xl font-bold mb-4 animate-bounce">Установка и чистка кондиционеров</h2>
+  <section class="text-center py-20 bg-white">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">Установка и чистка кондиционеров</h2>
     <p class="text-gray-600 mb-6 text-xl">Быстро • Качественно • Надёжно</p>
-    <a href="https://wa.me/77052755155" class="bg-green-500 text-white px-8 py-4 rounded-3xl text-lg hover:bg-green-600 transition">Написать в WhatsApp</a>
+    <a href="https://wa.me/77052755155" class="bg-green-500 text-white px-8 py-4 rounded-3xl text-lg hover:bg-green-600 transition">
+      Написать в WhatsApp
+    </a>
   </section>
 
   <!-- Services -->
-  <section class="max-w-6xl mx-auto py-12 grid md:grid-cols-2 gap-8">
-    <div class="bg-white p-6 rounded-3xl shadow-lg hover:scale-105 transition transform motion-safe:animate-fadeIn">
-      <img src="https://images.unsplash.com/photo-1605902711622-cfb43c443a1e?auto=format&fit=crop&w=600&q=80" alt="Чистка кондиционера" class="rounded-xl mb-4 w-full h-64 object-cover">
+  <section class="max-w-6xl mx-auto py-12 grid md:grid-cols-2 gap-8 px-4">
+
+    <div class="bg-white p-6 rounded-3xl shadow-lg hover:scale-105 transition">
+      <img src="https://mastersky.kz/image/cache/catalog/chistka-condicionera-500x500.jpg" class="rounded-xl mb-4 w-full h-64 object-cover">
       <h3 class="text-2xl font-bold mb-2">Чистка кондиционеров</h3>
       <p>Удаление пыли, грязи и запахов</p>
       <p class="mt-2 font-semibold text-green-600 text-xl">от 20 000 ₸</p>
     </div>
-    <div class="bg-white p-6 rounded-3xl shadow-lg hover:scale-105 transition transform motion-safe:animate-fadeIn">
-      <img src="https://images.unsplash.com/photo-1611175694985-5eab2d3c86c0?auto=format&fit=crop&w=600&q=80" alt="Установка кондиционера" class="rounded-xl mb-4 w-full h-64 object-cover">
+
+    <div class="bg-white p-6 rounded-3xl shadow-lg hover:scale-105 transition">
+      <img src="https://topclim.ru/upload/resize_cache/webp/iblock/0a2/0a2f27b335ef720441b52b24eab08b62.webp" class="rounded-xl mb-4 w-full h-64 object-cover">
       <h3 class="text-2xl font-bold mb-2">Установка кондиционеров</h3>
       <p>Профессиональный монтаж</p>
       <p class="mt-2 font-semibold text-green-600 text-xl">от 40 000 ₸</p>
     </div>
-  </section>
 
-  <!-- Reviews -->
-  <section class="bg-white py-16">
-    <h2 class="text-4xl font-bold text-center mb-12">Отзывы</h2>
-    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-      <div class="bg-gray-50 p-6 rounded-3xl shadow hover:scale-105 transition">
-        <p>"Очень быстро почистили кондиционер, стало дышать легче!"</p>
-        <p class="mt-4 font-semibold">— Арман</p>
-      </div>
-      <div class="bg-gray-50 p-6 rounded-3xl shadow hover:scale-105 transition">
-        <p>"Установили кондиционер за 2 часа, всё аккуратно"</p>
-        <p class="mt-4 font-semibold">— Данияр</p>
-      </div>
-      <div class="bg-gray-50 p-6 rounded-3xl shadow hover:scale-105 transition">
-        <p>"Рекомендую, отличная работа и норм цена"</p>
-        <p class="mt-4 font-semibold">— Айбек</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="py-16 text-center bg-green-50">
-    <h2 class="text-4xl font-bold mb-4">Связаться</h2>
-    <p class="text-2xl mb-6">+7 705 275 5155</p>
-    <a href="https://wa.me/77052755155" class="bg-green-500 text-white px-8 py-4 rounded-3xl text-lg hover:bg-green-600 transition">Написать</a>
   </section>
 
   <!-- Footer -->
   <footer class="bg-gray-800 text-white text-center p-6">
     <p>© 2026 Klimat Almaty</p>
   </footer>
-
-  <!-- Framer Motion animation -->
-  <script>
-    const { motion } = window['framer-motion'];
-    document.querySelectorAll('.motion-safe\\:animate-fadeIn').forEach(el => {
-      el.style.opacity = 0;
-      el.style.transform = 'translateY(40px)';
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if(entry.isIntersecting){
-            el.style.transition = 'all 0.7s ease-out';
-            el.style.opacity = 1;
-            el.style.transform = 'translateY(0)';
-            observer.unobserve(el);
-          }
-        });
-      }, { threshold: 0.3 });
-      observer.observe(el);
-    });
-  </script>
 
 </body>
 </html><!DOCTYPE html>
@@ -98,92 +63,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Klimat Almaty</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.umd.js"></script>
 </head>
+
 <body class="bg-gray-100 font-sans">
 
   <!-- Header -->
-  <header class="bg-green-600 text-white p-4 shadow-lg fixed w-full z-10">
+  <header class="bg-green-600 text-white p-4 shadow-lg fixed top-0 left-0 w-full z-50">
     <div class="max-w-6xl mx-auto flex justify-between items-center">
       <h1 class="text-2xl font-bold">Klimat Almaty</h1>
-      <a href="tel:+77052755155" class="bg-white text-green-600 px-4 py-2 rounded-xl font-semibold hover:bg-gray-200 transition">Позвонить</a>
+      <a href="tel:+77052755155" class="bg-white text-green-600 px-4 py-2 rounded-xl font-semibold hover:bg-gray-200 transition">
+        Позвонить
+      </a>
     </div>
   </header>
 
+  <!-- Отступ чтобы контент не залезал под шапку -->
+  <div class="mt-20"></div>
+
   <!-- Hero -->
-  <section class="text-center py-32 bg-white mt-16">
-    <h2 class="text-5xl font-bold mb-4 animate-bounce">Установка и чистка кондиционеров</h2>
+  <section class="text-center py-20 bg-white">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">Установка и чистка кондиционеров</h2>
     <p class="text-gray-600 mb-6 text-xl">Быстро • Качественно • Надёжно</p>
-    <a href="https://wa.me/77052755155" class="bg-green-500 text-white px-8 py-4 rounded-3xl text-lg hover:bg-green-600 transition">Написать в WhatsApp</a>
+    <a href="https://wa.me/77052755155" class="bg-green-500 text-white px-8 py-4 rounded-3xl text-lg hover:bg-green-600 transition">
+      Написать в WhatsApp
+    </a>
   </section>
 
   <!-- Services -->
-  <section class="max-w-6xl mx-auto py-12 grid md:grid-cols-2 gap-8">
-    <div class="bg-white p-6 rounded-3xl shadow-lg hover:scale-105 transition transform motion-safe:animate-fadeIn">
-      <img src="https://images.unsplash.com/photo-1605902711622-cfb43c443a1e?auto=format&fit=crop&w=600&q=80" alt="Чистка кондиционера" class="rounded-xl mb-4 w-full h-64 object-cover">
+  <section class="max-w-6xl mx-auto py-12 grid md:grid-cols-2 gap-8 px-4">
+
+    <div class="bg-white p-6 rounded-3xl shadow-lg hover:scale-105 transition">
+      <img src="https://mastersky.kz/image/cache/catalog/chistka-condicionera-500x500.jpg" class="rounded-xl mb-4 w-full h-64 object-cover">
       <h3 class="text-2xl font-bold mb-2">Чистка кондиционеров</h3>
       <p>Удаление пыли, грязи и запахов</p>
       <p class="mt-2 font-semibold text-green-600 text-xl">от 20 000 ₸</p>
     </div>
-    <div class="bg-white p-6 rounded-3xl shadow-lg hover:scale-105 transition transform motion-safe:animate-fadeIn">
-      <img src="https://images.unsplash.com/photo-1611175694985-5eab2d3c86c0?auto=format&fit=crop&w=600&q=80" alt="Установка кондиционера" class="rounded-xl mb-4 w-full h-64 object-cover">
+
+    <div class="bg-white p-6 rounded-3xl shadow-lg hover:scale-105 transition">
+      <img src="https://topclim.ru/upload/resize_cache/webp/iblock/0a2/0a2f27b335ef720441b52b24eab08b62.webp" class="rounded-xl mb-4 w-full h-64 object-cover">
       <h3 class="text-2xl font-bold mb-2">Установка кондиционеров</h3>
       <p>Профессиональный монтаж</p>
       <p class="mt-2 font-semibold text-green-600 text-xl">от 40 000 ₸</p>
     </div>
-  </section>
 
-  <!-- Reviews -->
-  <section class="bg-white py-16">
-    <h2 class="text-4xl font-bold text-center mb-12">Отзывы</h2>
-    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-      <div class="bg-gray-50 p-6 rounded-3xl shadow hover:scale-105 transition">
-        <p>"Очень быстро почистили кондиционер, стало дышать легче!"</p>
-        <p class="mt-4 font-semibold">— Арман</p>
-      </div>
-      <div class="bg-gray-50 p-6 rounded-3xl shadow hover:scale-105 transition">
-        <p>"Установили кондиционер за 2 часа, всё аккуратно"</p>
-        <p class="mt-4 font-semibold">— Данияр</p>
-      </div>
-      <div class="bg-gray-50 p-6 rounded-3xl shadow hover:scale-105 transition">
-        <p>"Рекомендую, отличная работа и норм цена"</p>
-        <p class="mt-4 font-semibold">— Айбек</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="py-16 text-center bg-green-50">
-    <h2 class="text-4xl font-bold mb-4">Связаться</h2>
-    <p class="text-2xl mb-6">+7 705 275 5155</p>
-    <a href="https://wa.me/77052755155" class="bg-green-500 text-white px-8 py-4 rounded-3xl text-lg hover:bg-green-600 transition">Написать</a>
   </section>
 
   <!-- Footer -->
   <footer class="bg-gray-800 text-white text-center p-6">
     <p>© 2026 Klimat Almaty</p>
   </footer>
-
-  <!-- Framer Motion animation -->
-  <script>
-    const { motion } = window['framer-motion'];
-    document.querySelectorAll('.motion-safe\\:animate-fadeIn').forEach(el => {
-      el.style.opacity = 0;
-      el.style.transform = 'translateY(40px)';
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if(entry.isIntersecting){
-            el.style.transition = 'all 0.7s ease-out';
-            el.style.opacity = 1;
-            el.style.transform = 'translateY(0)';
-            observer.unobserve(el);
-          }
-        });
-      }, { threshold: 0.3 });
-      observer.observe(el);
-    });
-  </script>
 
 </body>
 </html>
