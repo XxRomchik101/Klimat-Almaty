@@ -41,31 +41,16 @@
     </a>
   </section>
 <!-- Services -->
-<section class="max-w-6xl mx-auto py-12 grid md:grid-cols-2 gap-8 px-4">
-
-  <div class="bg-white p-6 rounded-3xl shadow-lg hover:scale-105 transition fade-in text-center">
-    <img src="https://mastersky.kz/image/cache/catalog/chistka-condicionera-500x500.jpg" class="rounded-xl mb-4 w-full h-64 object-cover">
-    <h3 class="text-2xl font-bold mb-2">Чистка кондиционеров</h3>
-    <p>Удаление пыли, грязи и запахов</p>
-    <p class="mt-2 font-semibold text-green-600 text-xl">от 20 000 ₸</p>
-    <a href="https://wa.me/77052755155?text=Здравствуйте!%20Очистка%20кондиционера"
-       class="mt-4 inline-block bg-green-500 text-white px-6 py-3 rounded-xl text-lg font-semibold transition-all hover:bg-green-600 hover:-translate-y-1">
-       Написать
-    </a>
-  </div>
-
-  <div class="bg-white p-6 rounded-3xl shadow-lg hover:scale-105 transition fade-in text-center">
-    <img src="https://topclim.ru/upload/resize_cache/webp/iblock/0a2/0a2f27b335ef720441b52b24eab08b62.webp" class="rounded-xl mb-4 w-full h-64 object-cover">
-    <h3 class="text-2xl font-bold mb-2">Установка кондиционеров</h3>
-    <p>Профессиональный монтаж</p>
-    <p class="mt-2 font-semibold text-green-600 text-xl">от 40 000 ₸</p>
-    <a href="https://wa.me/77052755155?text=Здравствуйте!%20Установка%20кондиционера"
-       class="mt-4 inline-block bg-green-500 text-white px-6 py-3 rounded-xl text-lg font-semibold transition-all hover:bg-green-600 hover:-translate-y-1">
-       Написать
-    </a>
-  </div>
-
-</section>
+<div class="bg-white p-6 rounded-3xl shadow-lg hover:scale-105 transition fade-in text-center">
+  <img src="a_photograph_captures_two_hvac_technicians_repairi.png" class="rounded-xl mb-4 w-full h-64 object-cover">
+  <h3 class="text-2xl font-bold mb-2">Ремонт кондиционеров</h3>
+  <p>Диагностика и устранение неисправностей</p>
+  <p class="mt-2 font-semibold text-green-600 text-xl">от 5 000 ₸</p>
+  <a href="https://wa.me/77052755155?text=Здравствуйте!%20Ремонт%20кондиционера"
+     class="mt-4 inline-block bg-green-500 text-white px-6 py-3 rounded-xl text-lg font-semibold transition-all hover:bg-green-600 hover:-translate-y-1">
+     Написать
+  </a>
+</div>
  
 
   <!-- Reviews -->
@@ -124,7 +109,39 @@
       appear.observe(el);
     });
 
-    function addReview() {
+    <script>
+function loadReviews() {
+  const saved = JSON.parse(localStorage.getItem('reviews')) || [];
+  const container = document.getElementById('reviews');
+
+  saved.forEach(r => {
+    const div = document.createElement('div');
+    div.className = "bg-gray-50 p-6 rounded-3xl shadow";
+    div.innerHTML = `<p>"${r.text}"</p><p class="mt-4 font-semibold">— ${r.name}</p>`;
+    container.appendChild(div);
+  });
+}
+
+function addReview() {
+  const name = document.getElementById('name').value;
+  const text = document.getElementById('text').value;
+
+  if (!name || !text) {
+    alert("Заполни всё!");
+    return;
+  }
+
+  const review = { name, text };
+
+  let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+  reviews.push(review);
+  localStorage.setItem('reviews', JSON.stringify(reviews));
+
+  location.reload();
+}
+
+loadReviews();
+</script>
       const name = document.getElementById('name').value;
       const text = document.getElementById('text').value;
 
